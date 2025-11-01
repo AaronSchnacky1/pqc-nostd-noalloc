@@ -1,19 +1,36 @@
-pqc-nostd-noalloc 0.0.1
+# `pqc-nostd-noalloc` — Minimalist Post-Quantum Cryptography Core
 
-DEMO dont use
+> **NIST Level 5 KEM + Level 3 Signatures**  
+> **`no_std` + `no_alloc` by default**  
+> **Zero heap. Zero warnings. Maximum security.**
 
-[dependencies]
-pqc-nostd-noalloc = "0.0.1"
-Features
-demo
+The library is designed for no_std and no_alloc by default,
+it is compatible with standard library and dynamic memory allocation if needed.
 
-Decrypted: Quantum-safe hello!
+A tiny, auditable PQC library for **firmware**, **secure boot**, **HSMs**, and **embedded systems**.
 
-Modules
-kem::KyberKem – Key Encapsulation
-sig::DilithiumSig – Digital Signatures
-apps::chat::KyberChat – Encrypted chat
-apps::email::KyberEmail – Sign + encrypt
-apps::firmware::KyberFirmware – Firmware update
-License
-Licensed under MIT.
+---
+
+## Features
+
+| Feature | Status |
+|-------|--------|
+| `no_std` | Supported |
+| `no_alloc` | **Default** |
+| `alloc` | Optional (one test) |
+| `std` | Optional (tests) |
+| Zeroize | Supported |
+| Tampering detection | Supported |
+| PQClean FFI | Supported |
+| **Zero warnings** | Supported |
+
+---
+
+## Usage
+
+```toml
+# Secure embedded (recommended)
+pqc-combo = "0.0.1"
+
+# Only if you need the tampering test
+pqc-nostd-noalloc = { version = "0.0.1", features = ["alloc"] }

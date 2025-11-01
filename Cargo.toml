@@ -2,7 +2,7 @@
 name = "pqc-nostd-noalloc"
 version = "0.0.1"
 edition = "2021"
-description = "Demo dont use"
+description = "Demo"
 license = "MIT"
 keywords = ["kyber", "dilithium", "pqc", "no-std", "no-alloc"]
 categories = ["cryptography", "no-std", "embedded"]
