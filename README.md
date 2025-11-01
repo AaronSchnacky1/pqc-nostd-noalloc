@@ -30,7 +30,7 @@ A tiny, auditable PQC library for **firmware**, **secure boot**, **HSMs**, and *
 
 ```toml
 # Secure embedded (recommended)
-pqc-combo = "0.0.1"
+pqc-combo = "0.0.2"
 
 # Only if you need the tampering test
-pqc-nostd-noalloc = { version = "0.0.1", features = ["alloc"] }
+pqc-nostd-noalloc = { version = "0.0.2", features = ["alloc"] }
